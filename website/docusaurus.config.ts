@@ -73,8 +73,8 @@ const config: Config = {
     navbar: {
       title: 'Physical AI Textbook',
       logo: {
-        alt: 'Physical AI Logo',
-        src: 'img/logo.svg',
+        alt: 'Robotics Logo',
+        src: 'img/robot-logo.svg',
       },
       items: [
         {

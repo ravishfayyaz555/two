@@ -53,11 +53,54 @@
 .heroContent {
   position: relative;
   z-index: 10;
-  max-width: 800px;
+  display: flex;
+  align-items: center;
   margin: 0 auto;
   text-align: center;
   padding: 4rem 2rem;
 }
+
+.heroText {
+  flex: 1;
+  text-align: left;
+  padding-right: 2rem;
+}
+
+.heroImageWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroImage {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 996px) {
+  .heroContent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .heroText {
+    padding-right: 0;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .heroButtons {
+    justify-content: center;
+  }
+  
+  .heroSubtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
 
 .heroLabel {
   display: inline-block;

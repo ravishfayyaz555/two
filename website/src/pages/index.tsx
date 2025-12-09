@@ -12,40 +12,45 @@ function HeroSection() {
       </div>
       <div className="container">
         <div className={styles.heroContent}>
-          <div className={styles.heroLabel}>Next-Generation Education</div>
-          <h1 className={styles.heroTitle}>
-            Build Intelligent
-            <br />
-            <span className={styles.gradientText}>Humanoid Robots</span>
-          </h1>
-          <p className={styles.heroSubtitle}>
-            Master Physical AI, ROS 2, NVIDIA Isaac Sim, and Vision-Language-Action models.
-            From simulation to real-world deployment in 13 weeks.
-          </p>
-          <div className={styles.heroButtons}>
-            <Link to="/docs/chapter-1-introduction-to-physical-ai" className={styles.primaryButton}>
-              Start Learning
-              <svg className={styles.buttonIcon} viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-              </svg>
-            </Link>
-            <Link to="/docs/intro" className={styles.secondaryButton}>
-              View Curriculum
-            </Link>
+          <div className={styles.heroText}>
+            <div className={styles.heroLabel}>Made with ♥️   by Maryam Arif</div>
+            <h1 className={styles.heroTitle}>
+              Future-Ready
+              <br />
+              <span className={styles.gradientText}>Intelligent Robotics</span>
+            </h1>
+            <p className={styles.heroSubtitle}>
+              Master Physical AI, ROS 2, NVIDIA Isaac Sim, and Vision-Language-Action models.
+              From simulation to real-world deployment in 13 weeks.
+            </p>
+            <div className={styles.heroButtons}>
+              <Link to="/docs/chapter-1-introduction-to-physical-ai" className={styles.primaryButton}>
+                Start Learning
+                <svg className={styles.buttonIcon} viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </Link>
+              <Link to="/docs/intro" className={styles.secondaryButton}>
+                View Curriculum
+              </Link>
+            </div>
+            <div className={styles.stats}>
+              <div className={styles.stat}>
+                <div className={styles.statValue}>13</div>
+                <div className={styles.statLabel}>Weeks</div>
+              </div>
+              <div className={styles.stat}>
+                <div className={styles.statValue}>6</div>
+                <div className={styles.statLabel}>Chapters</div>
+              </div>
+              <div className={styles.stat}>
+                <div className={styles.statValue}>4</div>
+                <div className={styles.statLabel}>Modules</div>
+              </div>
+            </div>
           </div>
-          <div className={styles.stats}>
-            <div className={styles.stat}>
-              <div className={styles.statValue}>13</div>
-              <div className={styles.statLabel}>Weeks</div>
-            </div>
-            <div className={styles.stat}>
-              <div className={styles.statValue}>6</div>
-              <div className={styles.statLabel}>Chapters</div>
-            </div>
-            <div className={styles.stat}>
-              <div className={styles.statValue}>4</div>
-              <div className={styles.statLabel}>Modules</div>
-            </div>
+          <div className={styles.heroImageWrapper}>
+            <img src="/img/Robot.png" alt="Robot" className={styles.heroImage} />
           </div>
         </div>
       </div>
