@@ -558,12 +558,12 @@
 
   .heroButtons {
     flex-direction: column;
+    align-items: center;
   }
 
   .primaryButton,
   .secondaryButton {
     width: 100%;
-    justify-content: center;
   }
 
   .stats {

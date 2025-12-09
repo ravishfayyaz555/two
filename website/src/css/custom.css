@@ -1310,3 +1310,32 @@ body {
 .navbar__logo svg {
   fill: var(--ifm-color-primary);
 }
+
+/* ==========================================================================
+   Skip To Content Link
+   ========================================================================== */
+
+.skipToContent {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -999;
+}
+
+.skipToContent:focus {
+  left: auto;
+  top: auto;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  text-decoration: none;
+  z-index: 999;
+  position: fixed;
+  margin: 10px;
+  border-radius: 5px;
+}
