@@ -6,6 +6,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Optional
+import uvicorn
 
 app = FastAPI(title="Physical AI Textbook API (Mock)")
 
@@ -363,8 +364,8 @@ def get_elaboration_for_context(context: str) -> str:
 
 if __name__ == "__main__":
     import uvicorn
-    print("🚀 Starting Mock Physical AI Textbook API...")
-    print("📚 This server provides sample responses for testing the chatbot UI")
-    print("🔗 API running at: http://localhost:8000")
-    print("📖 Docs available at: http://localhost:8000/docs")
+    print("^ Starting Mock Physical AI Textbook API...")
+    print("This server provides sample responses for testing the chatbot UI")
+    print("API running at: http://localhost:8000")
+    print("Docs available at: http://localhost:8000/docs")
     uvicorn.run(app, host="0.0.0.0", port=8000, log_level="info")
