@@ -150,7 +150,11 @@ const TEXTBOOK_CONTENT = {
 const server = new Server(
   {
     name: 'physical-ai-textbook-server',
+<<<<<<< HEAD
     version: '2.0.0',
+=======
+    version: '1.0.0',
+>>>>>>> master
   },
   {
     capabilities: {

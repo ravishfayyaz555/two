@@ -3,12 +3,17 @@ Configuration management using pydantic-settings.
 Loads and validates environment variables from .env file.
 """
 from pydantic_settings import BaseSettings, SettingsConfigDict
+<<<<<<< HEAD
 from typing import List, Optional
+=======
+from typing import List
+>>>>>>> master
 
 
 class Settings(BaseSettings):
     """Application settings loaded from environment variables."""
 
+<<<<<<< HEAD
     # OpenAI API Configuration (using OpenRouter)
     openai_api_key: Optional[str] = None  # Optional, defaults to OPENROUTER_API_KEY environment variable
     openai_model: str = "google/gemini-flash-1.5"  # Updated default for OpenRouter - more reliable
@@ -38,6 +43,25 @@ class Settings(BaseSettings):
     # OpenAI Generation Configuration
     openai_temperature: float = 0.3
     openai_max_tokens: int = 800
+=======
+    # Qdrant Configuration
+    qdrant_url: str
+    qdrant_api_key: str
+
+    # Neon PostgreSQL Configuration
+    database_url: str
+
+    # Embedding Model Configuration
+    transformers_cache: str = "./models_cache"
+    model_name: str = "sentence-transformers/all-MiniLM-L6-v2"
+
+    # API Configuration
+    allowed_origins: str = "http://localhost:3000"
+    rate_limit_per_minute: int = 10
+
+    # Logging
+    log_level: str = "INFO"
+>>>>>>> master
 
     model_config = SettingsConfigDict(
         env_file=".env",
@@ -47,9 +71,15 @@ class Settings(BaseSettings):
     )
 
     @property
+<<<<<<< HEAD
     def cors_origins_list(self) -> List[str]:
         """Parse comma-separated CORS_ORIGINS into list."""
         return [origin.strip() for origin in self.cors_origins.split(",")]
+=======
+    def cors_origins(self) -> List[str]:
+        """Parse comma-separated ALLOWED_ORIGINS into list."""
+        return [origin.strip() for origin in self.allowed_origins.split(",")]
+>>>>>>> master
 
 
 # Global settings instance

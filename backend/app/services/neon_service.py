@@ -26,7 +26,11 @@ class NeonService:
             self.pool = SimpleConnectionPool(
                 minconn=1,
                 maxconn=10,
+<<<<<<< HEAD
                 dsn=settings.neon_connection_string
+=======
+                dsn=settings.database_url
+>>>>>>> master
             )
             logger.info("✅ Neon connection pool initialized")
         except Exception as e:
@@ -220,6 +224,7 @@ class NeonService:
             if conn:
                 self.release_connection(conn)
 
+<<<<<<< HEAD
     def get_chunks_by_chapter(self, chapter_id: int) -> List[dict]:
         """
         Retrieve all chunks for a specific chapter.
@@ -259,6 +264,8 @@ class NeonService:
             if conn:
                 self.release_connection(conn)
 
+=======
+>>>>>>> master
     def health_check(self) -> bool:
         """
         Check if database is reachable.
